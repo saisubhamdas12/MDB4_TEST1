@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% block title %}
+        <title>dummy</title>
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mdb.css' %}">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="color: rgb(107, 230, 230);" >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Anime land</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+              <a class="nav-link" href="{% url 'registration' %}">registration</a>
+              <a class="nav-link" href="{% url 'login' %}">login</a>
+              
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/mdb.js' %}"></script>
+    {% block body_block %}
+      {% endblock %}
+</body>
+</html>

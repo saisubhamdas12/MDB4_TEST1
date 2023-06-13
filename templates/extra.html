@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% block title %}
+        <title>extra</title>
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mdb.css' %}">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Anime land</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                <a class="nav-link" href="{% url 'registration' %}">registration</a>
+                <a class="nav-link" href="{% url 'login' %}">login</a>
+                <div class="dropdown">
+                    <a class="btn btn-outline-secondary" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                      content
+                    </a>
+                  
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="https://images.search.yahoo.com/search/images;_ylt=AwrjW6V6sIhkfUIEu6RXNyoA;_ylu=Y29sbwNncTEEcG9zAzEEdnRpZANMT0NVSTA1OENfMQRzZWMDc2M-?p=demon+slayer+3d+images&fr=mcafee">demon slayer</a>
+                      <a class="dropdown-item" href="https://images.search.yahoo.com/search/images;_ylt=Awrjea6FsIhkTU0oNUGJzbkF;_ylu=c2VjA3NlYXJjaARzbGsDYnV0dG9u;_ylc=X1MDOTYwNjI4NTcEX3IDMgRmcgNtY2FmZWUEZnIyA3A6cyx2OmksbTpzYi10b3AEZ3ByaWQDVEJBZXZTUm5UVWFJc3A1RHlMRE5yQQRuX3JzbHQDMARuX3N1Z2cDMARvcmlnaW4DaW1hZ2VzLnNlYXJjaC55YWhvby5jb20EcG9zAzAEcHFzdHIDBHBxc3RybAMwBHFzdHJsAzE2BHF1ZXJ5A25hcnV0byUyMDNkJTIwaW1hZ2VzBHRfc3RtcAMxNjg2Njc5NzI1?p=naruto+3d+images&fr=mcafee&fr2=p%3As%2Cv%3Ai%2Cm%3Asb-top&ei=UTF-8&x=wrt">naruto</a>
+                      <a class="dropdown-item" href="https://images.search.yahoo.com/search/images;_ylt=Awrjea6tsIhkiUQo2E6JzbkF;_ylu=c2VjA3NlYXJjaARzbGsDYnV0dG9u;_ylc=X1MDOTYwNjI4NTcEX3IDMgRmcgNtY2FmZWUEZnIyA3A6cyx2OmksbTpzYi10b3AEZ3ByaWQDNUlrcXlfSnBRSjI2bjBDOU4yN2pUQQRuX3JzbHQDMARuX3N1Z2cDMARvcmlnaW4DaW1hZ2VzLnNlYXJjaC55YWhvby5jb20EcG9zAzAEcHFzdHIDBHBxc3RybAMwBHFzdHJsAzIxBHF1ZXJ5A3Rva3lvJTIwZ2hvdWwlMjAzZCUyMGltYWdlcwR0X3N0bXADMTY4NjY3OTc1MQ--?p=tokyo+ghoul+3d+images&fr=mcafee&fr2=p%3As%2Cv%3Ai%2Cm%3Asb-top&ei=UTF-8&x=wrt">tokyo ghoul</a>
+                    </div>
+                  </div>
+              
+            </div>
+          </div>
+        </div>
+      </nav>
+      <table class="table table-striped table-dark">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+      <center>
+        <div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-secondary">Left</button>
+  <button type="button" class="btn btn-secondary">Middle</button>
+  <button type="button" class="btn btn-secondary">Right</button>
+</div>
+    </center>
+      
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/mdb.js' %}"></script>
+    {% block body_block %}
+      {% endblock %}
+</body>
+</html>
